@@ -69,13 +69,6 @@ CutsForAlgorithm::CutsForAlgorithm() : Processor("CutsForAlgorithm") {
 				 std::string("CutPassedTracks")
 				 );
 
-       registerOutputCollection( LCIO::TRACK,
-				 "HighestD0Track" , 
-				 "Name of the highest d0 track output collection"  ,
-				 _colNameHighestD0Trks ,
-				 std::string("highestD0Tracks")
-				 );
-
        registerProcessorParameter("Z0cut",
 				  "Z0 cut for algorithm",
 				  _z0cut,
@@ -134,9 +127,6 @@ void CutsForAlgorithm::processEvent( LCEvent * evt ) {
        
        LCCollectionVec* Tracks = new LCCollectionVec( LCIO::TRACK ) ; // OUTPUT collection
        Tracks->setSubset(true);
-       LCCollectionVec* highestTrack = new LCCollectionVec( LCIO::TRACK ) ; // OUTPUT collection
-       highestTrack->setSubset(true);
-
 
        int ntrk = coltrk->getNumberOfElements();
       
@@ -174,21 +164,10 @@ void CutsForAlgorithm::processEvent( LCEvent * evt ) {
 	      }
        }
       
-       for(int it = 0; it < mc_to_trk.size(); it++ ){
-	      for(int it1 = 0; it1 < mc_to_trk.size(); it1++ ){
-	      
-
-       }
-
-
-       sort(mc_to_trk.begin(),mc_to_trk.end());
-       reverse(mc_to_trk.begin(),mc_to_trk.end());
 
 
        for(int k = 0; k < mc_to_trk.size(); k++ ){
 	      Track *trk = dynamic_cast<Track*>(mc_to_trk[k]);
-	      
-	    
 	      if(abs(trk->getTrackState(TrackState::AtIP)->getZ0()) < _z0cut  && abs(trk->getTrackState(TrackState::AtIP)->getD0())< _d0cut){
   
 		     Tracks->addElement(trk);
