@@ -1,0 +1,63 @@
+nohup: ignoring input
+
+Loading Style
+
+OBJ: TStyle	ildStyle	ILD Style : 0 at: 0x28fddd0
+
+Processing transverse_momenta.C+...
+Info in <TUnixSystem::ACLiC>: creating shared library /afs/desy.de/group/flc/pool/swathi/ilc-soft-test/example/analysis/./transverse_momenta_C.so
+In file included from input_line_12:9:
+In file included from ././transverse_momenta.C:1:
+/afs/desy.de/group/flc/pool/swathi/ilc-soft-test/example/analysis/InputManager.cpp:43:7: error: use of undeclared identifier 'cout'
+      cout << "Error(" << errno << ") opening " << m_directory << endl;
+      ^
+/afs/desy.de/group/flc/pool/swathi/ilc-soft-test/example/analysis/InputManager.cpp:43:67: error: use of undeclared identifier 'endl'
+      cout << "Error(" << errno << ") opening " << m_directory << endl;
+                                                                  ^
+/afs/desy.de/group/flc/pool/swathi/ilc-soft-test/example/analysis/InputManager.cpp:45:5: error: void function 'getDirectoryContent' should not return a value [-Wreturn-type]
+    return errno;
+    ^      ~~~~~
+/afs/desy.de/group/flc/pool/swathi/ilc-soft-test/example/analysis/InputManager.cpp:58:3: error: unknown type name 'regex'
+  regex regular_expression {".*" + m_search_extension + ""};
+  ^
+In file included from input_line_12:9:
+././transverse_momenta.C:10:7: error: use of undeclared identifier 'gStyle'
+      gStyle->SetOptStat(0);
+      ^
+././transverse_momenta.C:11:8: error: use of undeclared identifier 'gROOT'
+       gROOT->Reset();
+       ^
+././transverse_momenta.C:24:8: error: unknown type name 'TChain'
+       TChain chain("MyLCTuple");
+       ^
+././transverse_momenta.C:346:23: error: unknown type name 'TLegend'
+              auto leg = new TLegend(0.72,0.61,0.92,0.91);
+                             ^
+././transverse_momenta.C:356:25: error: unknown type name 'TLegend'
+               auto leg2 = new TLegend(0.72,0.61,0.92,0.91);
+                               ^
+././transverse_momenta.C:368:8: error: unknown type name 'THStack'
+              THStack *hs1 = new THStack();
+              ^
+././transverse_momenta.C:368:27: error: unknown type name 'THStack'
+              THStack *hs1 = new THStack();
+                                 ^
+././transverse_momenta.C:377:8: error: unknown type name 'THStack'
+              THStack *hs2 = new THStack();
+              ^
+././transverse_momenta.C:377:27: error: unknown type name 'THStack'
+              THStack *hs2 = new THStack();
+                                 ^
+././transverse_momenta.C:389:8: error: unknown type name 'TCanvas'
+              TCanvas* cweight = new TCanvas ("weight","weightl",800,600);
+              ^
+././transverse_momenta.C:389:31: error: unknown type name 'TCanvas'
+              TCanvas* cweight = new TCanvas ("weight","weightl",800,600);
+                                     ^
+././transverse_momenta.C:398:8: error: unknown type name 'TCanvas'
+              TCanvas* cweight2 = new TCanvas ("weight2","weightr",800,600);
+              ^
+././transverse_momenta.C:398:32: error: unknown type name 'TCanvas'
+              TCanvas* cweight2 = new TCanvas ("weight2","weightr",800,600);
+                                      ^
+Error in <ACLiC>: Dictionary generation failed!
