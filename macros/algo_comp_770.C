@@ -518,6 +518,7 @@ void algo_comp_770()
 				   }
 
 				   else{
+					   
 					 
 					  if(Z0[Dist[0].second].origin==true && Z0[Dist[0].second+1].origin==true ){
  
